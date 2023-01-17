@@ -16,7 +16,6 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   font-kerning: auto;
-  /* border: 1px solid red; */
 }
 /* END RESET */
 
@@ -227,6 +226,30 @@ section{
 
 /* End Header */
 
+.after-header{
+  padding: 20;
+}
+.after-header p{
+  font-family: var(--font-secondary);
+}
+
+.frame{
+  position: absolute;
+  /* border: 7px solid rgb(255, 255, 255); */
+  width: 300px;
+  top: -92%;
+  left: 6%;
+}
+.frame:nth-child(2){
+  top: 9%;
+  left: 32%;
+  z-index: 1;
+}
+.frame:nth-child(3){
+  top: -56%;
+  left: 67%;
+}
+
 /* ===================================================
 Main
 =================================================== */
@@ -250,6 +273,7 @@ Main
 
 .header .main-img{
   width: 50%;
+  z-index: 1;
 }
 .header .bg{
   width: 40rem;
@@ -297,8 +321,7 @@ Main
 
 .cta{
   position: relative;
-  /* border: 2px solid #d1d9e6 ;  */
-  border: 2px solid #b10000 ; 
+  border: 2px solid #d1d9e6 ; 
   border-radius: 0;
   background: #e8e8e8;
   box-shadow: 6px 6px 12px #c5c5c5,
@@ -463,6 +486,11 @@ SECTION
   
 }
 
+.image-section{
+  background:#fff url(../public/img/tech-bg.jpg) no-repeat center left ;
+  /* background-attachment: fixed; */
+  background-size: cover;
+}
 .pattern-section{
   background:#fff url(../public/img/pattern-2.png) no-repeat;
   background-size: cover;

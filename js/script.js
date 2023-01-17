@@ -1,4 +1,28 @@
 /* ===================================================
+Visibility on scroll
+=================================================== */
+
+AOS.init({
+  // Global settings:
+  disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+  startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
+  initClassName: 'aos-init', // class applied after initialization
+  animatedClassName: 'aos-animate', // class applied on animation
+  useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
+  disableMutationObserver: false, // disables automatic mutations' detections (advanced)
+  debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
+  throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
+  
+  offset: 600, // offset (in px) from the original trigger point
+  delay: 40, // values from 0 to 3000, with step 50ms
+  duration: 400, // values from 0 to 3000, with step 50ms
+  easing: 'ease', // default easing for AOS animations
+  once: false, // whether animation should happen only once - while scrolling down
+  mirror: true, // whether elements should animate out while scrolling past them
+  anchorPlacement: 'top-center', // defines which position of the element regarding to window should trigger the animation
+
+});
+/* ===================================================
 NAVBAR scroll Effect
 =================================================== */
 $(document).ready(function(){       
@@ -29,40 +53,6 @@ $(document).ready(function(){
     $("#menu").slideToggle("slow");
   });
 });
-/* ===================================================
-Visibility on scroll
-=================================================== */
-
-// gsap.to('.main-header', { 
-//   autoAlpha: 0,
-//   duration: 1,
-//   ease: "none",
-//   scrollTrigger: {
-//     start: 0,
-//     end: 1,
-//     toggleActions: "play none reverse"
-//   }
-// });
-
-// gsap.timeline({
-//   scrollTrigger:{
-//     trigger: ".section",
-//     start:"top center",
-//     end:"bottom top",
-//     marker:true,
-//     scrub:true,
-//     pin: true,
-//   }
-// })
-// .from(".box", {
-//   x:innerWidth * -1,
-//   opacity: 0,
-// })
-// .from(".about-img", {
-//   x:innerWidth * -1,
-//   opacity: 0,
-// })
-
 
 /* ===================================================
 HORIZONTAL PAGE scroll
@@ -102,3 +92,45 @@ tl.staggerFrom('.fade-in',
 /* ===================================================
 Scrolling Gallery
 =================================================== */
+
+$('.scroll').paroller({
+  factorSm: 0.1,
+  factor: 0.7,
+  type: 'foreground',
+  direction: 'vertical'
+});
+
+$('.bg-line').paroller({
+  factorSm: 0.1,
+  factor: 0.4,
+  type: 'foreground',
+  direction: 'horizontal'
+});
+
+$('.frame:nth-child(1)').paroller({
+  factorSm: 0.1,
+  factor: 0.1,
+  type: 'foreground',
+  direction: 'vertical'
+});
+$('.frame:nth-child(2)').paroller({
+  factorSm: -0.1,
+  factor: -0.1,
+  type: 'foreground',
+  direction: 'vertical'
+});
+$('.frame:nth-child(3)').paroller({
+  factorSm: -0.1,
+  factor: -0.1,
+  type: 'foreground',
+  direction: 'horizontal',
+  transition:2
+});
+
+$('.car').paroller({
+  factorSm: 0.1,
+  factor: 0.4,
+  type: 'foreground',
+  direction: 'horizontal',
+  transition:2
+});
