@@ -576,8 +576,28 @@ Partner
 /* ===================================================
 Portfolio
 =================================================== */
+.portfolio-section{
+  height:auto;
+  padding: 80px 10px;
+  font-family: var(--font-poppins);
+  position: relative;
+  background-color: #e8e8e8;
+}
 
-
+.project{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.project .image{
+  width: 40%;
+}
+.project .image img{
+  width: 100%;
+}
+.project .project-details{
+  width: 54%;
+}
 /* ===================================================
       Contact Form
 =====================================================*/
