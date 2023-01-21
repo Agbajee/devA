@@ -1,15 +1,12 @@
 /* Mobile Screens */
 @media screen and (max-width: 576px){
     .main-header{
-        padding:0;
         box-shadow: 0px 1px 10px rgb(209, 209, 209);
     }
     .header{
-        padding:0;
         background-position: initial;
-    }
-    .header .container{
-        padding:10px;
+        padding: 30px 20px 5px 20px;
+        /* height: 70vh; */
     }
     .bg-circle{
         position: absolute;
@@ -28,8 +25,8 @@
     }
 
     .header .bg{
-        left: 32px;
-        width: 21rem;
+        left: -10px;
+        width: 28rem;
     }
     .intro-text{
         text-align: start;
@@ -79,9 +76,8 @@
         height:60px;
     }
     .subtext{
-        font-size: 18px;
-        line-height: 24px;
-        height: 75px;
+        font-size: 16px;
+        height: 80px;
         border-left:3px solid var(--color-primary);
         padding-left: 10px;
     }
@@ -117,27 +113,74 @@
 
     .section-title {
         font-weight: 400;
-        font-size: 7rem;
-        top: -63px;
-        left: 20px;
+        font-size: 6.5rem;
+        top: -50px;
+        left:0;
+    }
+
+    .image-section{
+        background:#fff  ;
+        background-size: cover;
       }
 
+    .after-header{
+        overflow: hidden;
+        height: auto;
+        padding: 30px 10px 30px 10px;
+
+    }
+
+    .after-header h1{
+        font-size: 32px;
+    }
+    .after-header p{
+     font-size: 20px;
+    }
+
+    /*================================================================
+    About Section
+    ================================================================*/
+    .about-me h4{
+        font-size: 32px;
+        font-family: var(--font-poppins);
+    }
+
+    .about-me p{
+        font-size: 18px;
+        font-weight: 100;
+        line-height: 1.8em;
+    }
+    .about-me p strong{
+        font-weight: 600;
+    }
+    .about-me ul{
+        padding: 0;
+        font-size: 18px;
+    }
+    .about-me ul li{
+        padding: 5px 0;
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+    }
+    .about-me ul i{
+       font-size: 18px;
+       margin-right: 10px;
+       color: var(--color-secondary);
+    }
     .about-img{
+      width: 250px;
+      height: 250px;
+    }
+  
+    .rect {
+      top: 100px;
+      left: 0;
       width: 300px;
       height: 300px;
     }
-  
-    .rect-4-icon1 {
-      top: 100px;
-      left: 0;
-      width: 400px;
-      height: 400px;
-    }
     
-    .__about_text {
-        margin-top: 120px !important;
-    }
-
+   
     .menu ul{
         padding:75px 5px;
       }
@@ -150,5 +193,53 @@
     .skill-card img{
     width: 50px;
     }
-  }
 
+    .frame{
+        position: absolute;
+        border: 5px solid rgb(255, 255, 255);
+        width: 110px;
+        top: -92px;
+        left: 60%;
+    }
+    .frame:nth-child(1){
+        display: none !important;;
+    }
+
+    .frame:nth-child(2){
+        top: 0%;
+        left: 44%;
+        z-index: 1;
+      }
+      .frame:nth-child(3){
+        top: -56%;
+        left: 67%;
+      }
+
+    /*==================
+    Partner
+    ==================*/
+    .partners{
+        display: flex;
+        overflow-x: scroll;
+        justify-content: space-between;
+        flex-direction: column;  
+    }
+    .partners img{
+        width: 150px;
+        transition: all .5s ease;
+    }
+
+    .address .social{
+        align-items: center;
+        padding: 5px 40px 5px 0;
+    }
+
+    /* --------------------------------
+        Globals
+    ----------------------------------*/
+    .car{
+        top: 0px;
+        left: 400px;
+        width: 100px;
+    }
+  }

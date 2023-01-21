@@ -7,33 +7,54 @@
   --font-minimal: Minimal, sans-serif;
 
   /* Colors */
-  --color-primary: #b10000;
-  /* --color-primary: #07a3b2; */
-  /* --color-primary: #0f1b61; */
-  --color-secondary: #d9ecc7;
+  --color-main: #07a3b2;
+  /* --color-primary: #b10000; */
+  --color-primary: #064497;
+  --color-secondary: #f4524d;
+  /* --color-secondary: #d9ecc7; */
   
   --color-white: #f1f0f0;
   --color-black: #000;
   --color-dark:#1b1c1e;
 }
 
+@keyframes changeBG{
+  0% {
+    background: #07a4b225;
+  }
+  25% {
+    background: #d9ecc748;
+
+  }
+  50% {
+    background: #fff;
+  }
+  75% {
+    background: #d9ecc73a;
+  }
+  100% {
+    background: #fff;
+  }
+}
+
+@keyframes spin {
+  0% {
+      transform: translateX(50px);
+  }
+  50%{
+      transform: translateX(-50px);
+  }
+  100% {
+      transform: translateX(50px);
+  }
+}
+
 .car{
   position: absolute;
   left: 30%;
-  top: 40%;
-  width: 200px;
-}
-.bg-line{
-  position: absolute;
-  left: 30%;
-  top: 0;
-  height: 100%;
-}
-.bg-line:nth-child(2){
-  left: 50%;
-}
-.bg-line:nth-child(3){
-  left: 70%;
+  top: 65%;
+  width: 150px;
+  opacity: 0.25;
 }
 
 ::-webkit-scrollbar{

@@ -1,3 +1,11 @@
+var inputField = $('.js-input');
+$(inputField).on('change', function(){
+  if ($(this).val() == '') {
+    $(this).removeClass( 'not-empty' );
+  } else {
+    $(this).addClass( 'not-empty' );
+  }
+});
 /* ===================================================
 Visibility on scroll
 =================================================== */
@@ -25,34 +33,34 @@ AOS.init({
 /* ===================================================
 NAVBAR scroll Effect
 =================================================== */
-$(document).ready(function(){       
-  var scroll_start = 0;
-  var startchange = $('.main');
-  var offset = startchange.offset();
-  $(document).scroll(function() { 
-     scroll_start = $(this).scrollTop();
-     if(scroll_start > offset.top) {
-        $('.main-header')
-        .css('background', '#d9ecc7');
-      } else {
-        $('.main-header')
-        .css('background', '#e8e8e8')
-      }
-  });
-});
+// $(document).ready(function(){       
+//   var scroll_start = 0;
+//   var startchange = $('.main');
+//   var offset = startchange.offset();
+//   $(document).scroll(function() { 
+//      scroll_start = $(this).scrollTop();
+//      if(scroll_start > offset.top) {
+//         $('.main-header')
+//         .css('background', '#d9ecc7');
+//       } else {
+//         $('.main-header')
+//         .css('background', '#e8e8e8')
+//       }
+//   });
+// });
 
-$(document).ready(function(){
-  $('#menuToggler').click(function (e) { 
-    e.preventDefault();
-    "strict";
-    $("#menu").slideToggle("slow");
-  });
-  $('#closeMenu').click(function (e) { 
-    e.preventDefault();
-    "strict";
-    $("#menu").slideToggle("slow");
-  });
-});
+// $(document).ready(function(){
+//   $('#menuToggler').click(function (e) { 
+//     e.preventDefault();
+//     "strict";
+//     $("#menu").slideToggle("slow");
+//   });
+//   $('#closeMenu').click(function (e) { 
+//     e.preventDefault();
+//     "strict";
+//     $("#menu").slideToggle("slow");
+//   });
+// });
 
 /* ===================================================
 HORIZONTAL PAGE scroll
@@ -86,7 +94,7 @@ tl.staggerFrom('.scroll-in',
 tl.staggerFrom('.fade-in',
         0.5,
         {opacity:"0", ease:Power4.easeInOut},
-        0.5
+        0.2
   )
 
 /* ===================================================
@@ -101,8 +109,8 @@ $('.scroll').paroller({
 });
 
 $('.bg-line').paroller({
-  factorSm: 0.1,
-  factor: 0.4,
+  factorSm: -0.1,
+  factor: -0.1,
   type: 'foreground',
   direction: 'horizontal'
 });
